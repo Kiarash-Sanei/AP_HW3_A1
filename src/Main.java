@@ -82,6 +82,8 @@ public class Main {
                 mostFrequent = friend.getMostFrequent();
             }
         }
-        System.out.printf("Word count: %d \nThe longest word is \"%s\" with a length of %d. \nThe most frequent word is \"%s\" with %d appearances. \nHackCode: %.3f \n", wordCount, longest, longest.length(), mostFrequent, mostFrequency, hackCodeQuantity);
+        System.out.printf("Word count: %d \nThe longest word is \"%s\" with a length of %d. \nThe most frequent word is " +
+                "\"%s\" with %d appearances. \nHackCode: %.3f \n",
+                wordCount, longest, longest.length(), mostFrequent, mostFrequency, hackCodeQuantity);
     }
 }
