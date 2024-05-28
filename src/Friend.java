@@ -6,10 +6,14 @@ public class Friend extends Thread {
     private final HashMap<String, Integer> frequency = new HashMap<>();
     private String mostFrequent = "";
     private int mostFrequency = 0;
+    private final String text;
+    private final int position;
+    private double hackCode = 0;
 
-    public Friend(ArrayList<String> words) {
+    public Friend(ArrayList<String> words, String text, int position) {
         this.words = words;
-
+        this.text = text;
+        this.position = position;
     }
 
     @Override
@@ -22,6 +26,8 @@ public class Friend extends Thread {
                 mostFrequent = word;
             }
         }
+        for (int i = 0; i < text.length(); i++)
+            hackCode += text.charAt(i) * Math.pow(0.99998, i + position);
     }
 
     public String getMostFrequent() {
@@ -34,5 +40,9 @@ public class Friend extends Thread {
 
     public int wordCount() {
         return words.size();
+    }
+
+    public double getHackCode() {
+        return hackCode;
     }
 }
