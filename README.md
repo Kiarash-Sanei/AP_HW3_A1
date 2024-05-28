@@ -1,4 +1,4 @@
 # Advanced Programming 
-## Home Work 3
+## Homework 3
 ### Assignment 1 : WikiPedia
-A multithreading programm that processes text
+A multithreading program that processes text
